@@ -1,0 +1,30 @@
+
+   Q 1- A user searches for hotels in a particular city and sees rooms available on the search results page,
+       but when they attempt to book, the rooms are no longer available?
+
+         Implement real-time availability updates and caching strategies to ensure data consistency.
+
+   Q 2-  Important data such as payment details and bank information is critical to protecting users'
+        financial information and maintaining trust?
+
+        Encrypt data transmitted between clients and servers using TLS (Transport Layer Security) to protect it
+        from eavesdropping and tampering.
+
+        Use payment processors that comply with the Payment Card Industry Data Security Standard (PCI-DSS) to handle
+        credit card transactions securely
+
+   Q 3 -  Users' sessions expire unexpectedly during the booking process
+         Implement auto-save to preserve booking progress in case of session expiration.
+         Implement auto-save to preserve booking progress in case of session expiration.
+
+   Q 4 - To offer concessions or discounts to a user who books the same hotel repeatedly,
+   you can implement a loyalty system that recognizes
+          repeat bookings and provides specific rewards or discounts.
+
+   Q 5 - Users do not receive booking confirmations or receive incorrect details.
+             Use email queueing systems to manage high volumes and ensure reliable delivery.
+
+   Q 6 - High traffic or abuse from automated scripts causes performance issues.
+           Implement rate limiting to control the number of requests from a user or IP address.
+
+
