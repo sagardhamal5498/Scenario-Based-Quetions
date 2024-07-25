@@ -1,1 +1,48 @@
-dolly chaiwala
+Question 1: Describe how you would ensure that the hotel booking system is scalable to handle peak traffic times, such as holiday seasons.
+Answer:
+To ensure scalability, I would design the system with a microservices architecture, allowing independent scaling of different components (e.g., booking, search, payment).
+Using cloud services like AWS or Azure, I would implement auto-scaling policies to dynamically adjust resources based on traffic.
+Load balancing would distribute traffic evenly across servers, and a CDN (Content Delivery Network) would help deliver content quickly to users globally.
+
+Question 2: How would you implement a notification system to send booking confirmations, reminders, and promotional offers to users?
+Answer:
+I would implement a notification system using a message broker (e.g., RabbitMQ) to handle asynchronous messaging.
+Different types of notifications (email, SMS, in-app) would be processed by dedicated microservices
+For emails, I would use an email service provider (e.g., SendGrid ,mailgun , Amazon SES).
+For SMS, I would integrate with an SMS gateway (e.g., Twilio).
+
+Question 3: How would you handle booking cancellations and refunds? What would the workflow look like?
+Answer:
+The cancellation and refund workflow involves the following steps:
+Request Cancellation: The user requests a booking cancellation through the system.
+Check Eligibility: The system checks if the booking is eligible for cancellation based on the hotel’s cancellation policy.
+Process Refund: If eligible, the system initiates a refund through the payment gateway.
+Update Booking Status: The booking status is updated to ‘Cancelled’ in the database.
+Notify User: The user receives a notification confirming the cancellation and refund status.
+
+Question 4: How would you handle edge cases, such as partial refunds or non-refundable bookings?
+Answer:
+For edge cases, the system would need to handle different cancellation policies.
+For partial refunds, the system would calculate the refund amount based on the policy and process it accordingly.
+For non-refundable bookings, the system would notify the user that the booking cannot be refunded and update the booking status without initiating a refund.
+
+Question 5: How would you implement user authentication and authorization in a hotel booking system? What technologies or frameworks would you use?
+Answer:
+I would implement user authentication using OAuth2.0 or "JWT" (JSON Web Tokens) for secure and scalable authentication.
+Spring Security, combined with JWT, can be used for implementation in a Spring Boot application.
+For authorization,
+I would define roles and permissions (e.g., guest, hotel manager, admin) and use role-based access control (RBAC) to ensure users have appropriate access levels.
+
+Question 6: How would you implement dynamic pricing for hotel rooms based on factors like season, demand, and customer loyalty?
+Answer:
+I would implement dynamic pricing by creating a pricing engine that considers various factors such as seasonality, demand, and customer loyalty.
+This engine would use predefined rules and algorithms to calculate the room price in real-time
+For instance, during high-demand periods, prices can be adjusted upwards, while loyal customers can receive discounts.
+The pricing data would be stored in a database and accessed by the booking system to display and apply the correct prices.
+for example :- use spring drools
+steps:-
+i. add dependency "kie-spring"
+ii. drools rule file (pricerules.drl)
+iii. add drools configuration class as well
+iv. controller and service.
+
