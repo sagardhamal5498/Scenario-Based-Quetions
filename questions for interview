@@ -1,0 +1,67 @@
+Q.recent projects
+
+Q.which architecture in project?   and why?
+
+Q.string v/s stringbuffer?
+-->
+String:
+Immutable: Once created, its value can't be changed. Any modification (like concatenation) creates a new String object.
+Performance: Slower for repeated modifications because each change creates a new object.
+Thread-Safety: Safe to use across threads, but not because it's designed for concurrency, just due to its immutability.
+
+StringBuffer:
+Mutable: Can be modified without creating new objects. Methods like append() or insert() change the original object.
+Performance: More efficient for repeated modifications since it doesn't create new objects.
+Thread-Safety: Synchronized, meaning it's safe to use in multi-threaded environments without additional synchronization.
+
+Q. diff. ways of creating objects  ?  
+-->
+1)Using Class newInstance() Method
+Description: You can use the newInstance() method from Class class, which calls the default (no-argument) constructor.
+Example:
+java
+Copy code
+MyClass obj = MyClass.class.newInstance();
+Use Case: This method is less common and is typically used in reflection. It's important to note that newInstance() is deprecated in Java 9+ in favor of Constructor.newInstance().
+
+2)new keyword.
+3)clone method
+4)factory design pattern
+
+Q.Q. changes in hashmap?
+--->
+In Java 8, HashMap introduced a significant change to handle hash collisions more efficiently. When a bucket’s size exceeds a threshold (default 8), 
+instead of using a linked list, the bucket is transformed into a balanced binary tree (a Red-Black tree).
+Benefit: This change improves the worst-case time complexity of operations like get() and put() from O(n) to O(log n) when many keys collide.
+
+Q.recent projects
+
+Q.which architecture in project?  and why?
+
+Q.string v/s stringbuffer?  mutable, performance(modifications slower/faster) ,both thread safe
+
+Q.diff. ways of creating objects  ?  new,clone, design pattern(factory)
+
+Q.can we use private constructor?
+
+Q. starter dependency?
+
+Q. how do u connect database to springboot application?
+
+Q. changes in hashmap?
+
+Q.why default method introduced in java8?
+
+Q. why optional is introudced in java8?
+
+Q. latest version of springboot?
+
+Q.design patterns in java?
+
+Q.What is the purpose of the final, finally, and finalize keywords in Java?
+
+Q.diff between arraylist vs linkedlist?
+
+Q.Describe the difference between a Checked and Unchecked exception?
+
+Q.transient keyword?
